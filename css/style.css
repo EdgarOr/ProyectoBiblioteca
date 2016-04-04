@@ -1,0 +1,53 @@
+* {
+	margin: 0 auto;
+}
+.navegar {
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+}
+
+.busqueda{
+    padding: 10px;
+}
+
+.marca {
+   --font: bold 5em, 'Arial Black', sans-serif;
+    padding-top: 15px;
+}
+
+.pieDePagina {
+    font-size: 20px;
+    color: white;
+    --padding: 10px;
+    background-color: black;
+}
+
+.parrafo {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+
+.panelgeneral {
+	border: 1px solid black;	
+}
+.paneltitulo {
+	background-color: black;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+	text-align: center;	
+}
+
+.ayuda{
+	margin-top:20px;
+}
+
+.ayudaparrafo {
+	font-size: 20px;
+}
+
+.separarfooter {
+	margin-bottom: 20px;
+}
