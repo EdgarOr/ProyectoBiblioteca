@@ -62,38 +62,17 @@
                      <ul class="nav navbar-nav navbar-right navegar">
                         <li class="dropdown">
                             <!-- Button trigger modal -->
-                            <a href="" data-toggle="modal" data-target="#myModal">
+                            <a href="" data-toggle="modal" data-target="#modalLogin">
                               Inicio sesión
                             </a>
                             
              
                         </li>
                     </ul>   
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                              <h4 class="modal-title">Iniciar sesión</h4>
-                            </div>
-                            <div class="modal-body">
-                              <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input class="form-control" id="email" placeholder="ejemplo@correo.com" type="email">
-                              </div>
-                              <div class="form-group">
-                                <label for="password">Contraseña</label>
-                                <input class="form-control" id="password" placeholder="********" type="password">
-                              </div>
-                              <p class="text-right"><a href="#">¿Olvidó su contraseña?</a></p>
-                            </div>
-                            <div class="modal-footer">
-                              <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
-                              <a href="#" class="btn btn-primary">Aceptar</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div> 
+                    
+                    <?php
+                        include 'includes/modals/modalLogin.php';
+                    ?>
 
                 </div>    
             </div>

@@ -1,31 +1,31 @@
 <?php
     include 'includes/header.php';
-    include 'includes/navbar.php';
+    include 'includes/sidebar.php';
 ?>
 
 
-    <div class="row">
+    <div id="page-content-wrapper">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-md-5">
            
-            <form action="" class="form">
+            <form action="">
                 <div class="form-group">
                    <fieldset>
-                       <legend> Alta libro </legend>
+                       <legend> <h2> Alta libro </h2> </legend>
                        <label for="isbn">ISBN</label>
-                        <input type="text" class="form-control" id="isbn" name="isbn" placeholder="10 o 13 dígitos"> 
+                        <input type="text" class="form-control" id="isbn" name="isbn" placeholder="10 o 13 dígitos" required> 
 
                         <label for="tituloLibro">Título del libro</label>
-                        <input type="text" class="form-control" id="tituloLibro" name="tituloLibro" placeholder="Título del libro">
+                        <input type="text" class="form-control" id="tituloLibro" name="tituloLibro" placeholder="Título del libro" required>
 
                         <label for="autorLibro">Autor(es)</label>
-                        <input type="text" class="form-control" id="autorLibro" name="autorLibro" placeholder="Por ejemplo: Pérez, Juan; Hernández, Pedro">
+                        <input type="text" class="form-control" id="autorLibro" name="autorLibro" placeholder="Por ejemplo: Pérez, Juan; Hernández, Pedro" required>
                         
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="editorial">Editorial</label>
-                                    <input type="text" class="form-control" id="editorial" name="editorial" placeholder="Por ejemplo: Santillana">
+                                    <input type="text" class="form-control" id="editorial" name="editorial" placeholder="Por ejemplo: Santillana" required>
                                 </div>
                             </div>
 
@@ -41,8 +41,7 @@
                         
                         <div class="form-group">
                             <label for="estante">Estante:</label>
-                            <select name="estante" id="estante">
-                                <option>Elija un estante</option>
+                            <select name="estante" id="estante" class="selectpicker" title="Elija un estante" data-width="150px" required>
                                 <option>Estante 1</option>
                                 <option>Estante 2</option>
                                 <option>Estante 3</option>
@@ -51,56 +50,40 @@
                         </div>
                         
                         <!-- MODAL ESTANTE-->
-                        <div class="modal fade" id="modalEstante">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                  <h4 class="modal-title">Añadir estante</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="form-group">
-                                    <label for="email">Estante:</label>
-                                    <input class="form-control" id="text" placeholder="Introduzca la clave del estante" type="text">
-                                    
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Item 1</li>
-                                        <li class="list-group-item">Item 2</li>
-                                        <li class="list-group-item">Item 3</li>
-                                    </ul>
-
-                                  </div>
-                                  
-                                </div>
-                                <div class="modal-footer">
-                                  <a href="#" data-dismiss="modal" class="btn btn-danger">Cancelar</a>
-                                  <a href="#" class="btn btn-success">Aceptar</a>
-                                </div>
-                              </div>
-                            </div>
-                        </div> 
+                        
+                        <?php
+                            include 'includes/modals/modalEstante.php'
+                       ?>
+                        
+                       
                         
                         
                         <div class="form-group">
                             <label for="categoria">Categoría:</label>
-                            <select name="categoria" id="categoria" >
-                                <option>Elija una categoría</option>
+                            <select name="categoria" id="categoria" class="selectpicker" multiple title="Elija una categoría" data-width="250px">
                                 <option>Categoria 1</option>
+                                <option>Categoria 2</option>
+                                <option>Categoria 2</option>
+                                <option>Categoria 2</option>
                                 <option>Categoria 2</option>
                             </select>
                             
                             <button class="btn btn-link pull-right" type="button" data-toggle="modal" data-target="#modalCategoria"> Añadir otro</button>
                         </div>
+
+                        
+                         <?php
+                            include 'includes/modals/modalCategoria.php'
+                        ?>
+                        
                         
                         <label for="descripcion">Descripción</label>
-                        <textarea name="descripcion" id="descripcion" cols="73" rows="6"></textarea>
+                        <textarea name="descripcion" id="descripcion" cols="49" rows="6" placeholder="Breve descripción del libro..."></textarea>
                         
+                        <div class="col-sm-4"></div>
                         
-                        <div class="col-sm-4">
-                           
-                        </div>
-                         <button class="btn btn-info">Limpiar</button>
-                            <button class="btn btn-success">Guardar</button>
+                        <button id="clearButton">Limpiar</button>
+                        <button id="saveButton">Guardar</button>
                                 
                         
                    </fieldset>

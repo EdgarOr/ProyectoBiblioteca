@@ -1,0 +1,77 @@
+/*body {
+  background-color: #333333;
+  font-family: "Open Sans", Helvetica;
+}*/
+
+#loginForm {
+  text-align: center;
+}
+
+#loginLabel {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
+}
+#loginLabel .label-text {
+  color: #BEB58A;
+  cursor: text;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  transform: translateY(-34px);
+  transition: all 0.3s;
+}
+#loginLabel input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #BEB58A;
+  color: white;
+  font-size: 36px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+}
+#loginLabel input:focus {
+  max-width: 100%;
+  width: 400px;
+}
+#loginLabel input:focus + .label-text {
+  color: #F0F0F0;
+  font-size: 13px;
+  -moz-transform: translateY(-105px);
+  -ms-transform: translateY(-105px);
+  -webkit-transform: translateY(-105px);
+  transform: translateY(-105px);
+}
+#loginLabel input:valid + .label-text {
+  font-size: 13px;
+  -moz-transform: translateY(-105px);
+  -ms-transform: translateY(-105px);
+  -webkit-transform: translateY(-105px);
+  transform: translateY(-105px);
+}
+
+#loginButton {
+  background-color: #333333;
+  border: 2px solid white;
+  border-radius: 27px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all 200ms;
+}
+#loginButton:hover, #loginButton:focus {
+  background-color: white;
+  color: #333333;
+  outline: 0;
+}

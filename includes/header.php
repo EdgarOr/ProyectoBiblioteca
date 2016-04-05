@@ -9,10 +9,12 @@
     <meta name="author" content="Nabu Co.">
     <meta name="keywords" content="nabu, bliblioteca, virtual, conocimiento">
     
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/round-about.css" rel="stylesheet">
     <link href="css/3-col-portfolio.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
 </head>
 
 <body>
