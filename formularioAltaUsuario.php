@@ -50,9 +50,9 @@
                      </div>
                      
                      <div class="col-md-5"></div>
-                     <button id="clearButton">Limpiar</button>
-                     <button id="saveButton">Guardar</button>
-                     
+                     <button class="weaButton">Limpiar</button>
+                     <button class="saveButton">Guardar</button>
+                             
                  </fielset>
              </div>
          </form>

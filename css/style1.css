@@ -1,10 +1,10 @@
 
-/*-------------------------*/
-/*   INICIO SIDEBAR CHIDA  */
-/*-------------------------*/
+/*-------------------------------------------*/
+/*   Awesome Bootstrap 3 sidebar Navigation  */
+/*-------------------------------------------*/
 
 @import "flat-ui.min.css";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import "font-awesome.min.css";
 @import "animate.min.css";
 /*-------------------------------*/
 /*           VARIABLES           */
@@ -116,13 +116,13 @@ html {
 .sidebar-nav li:nth-child(6):before {
   background-color: #BEB58A;
 }
-.sidebar-nav li:nth-child(7):before {
+.sidebar-nav li:nth-child(8):before {
   background-color: lightgrey;
 }
-.sidebar-nav li:nth-child(8):before {
+.sidebar-nav li:nth-child(9):before {
   background-color: #8a6cb6;
 }
-.sidebar-nav li:nth-child(9):before {
+.sidebar-nav li:nth-child(7):before {
   background-color: #987dbf;
 }
 .sidebar-nav li:hover:before {
@@ -319,15 +319,100 @@ label {
     color: white;
 }
 
-/*-------------------------*/
-/*    FIN SIDEBAR CHIDA    */
-/*-------------------------*/
+/*------------------------------------------------*/
+/*  FINAL Awesome Bootstrap 3 sidebar Navigation  */
+/*------------------------------------------------*/
+
+/////////////////////////////////////////////////////////////
+
+/*------------------------------*/
+/*  CSS Search Field Animation  */
+/*------------------------------*/
+
+.cntr {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.cntr .cntr-innr {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/*** STYLES ***/
+.search {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid #FFFFFF;
+  border-radius: 25px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: text;
+}
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.search.active,
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+}
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+}
+.search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+  
+}
+
+#pText {
+  margin-top: 30px;
+}
+
+
+
+/*------------------------------------*/
+/*  FINAL CSS Search Field Animation  */
+/*------------------------------------*/
+
+
+/////////////////////////////////////////////////////////////
+
 
 /*-------------------------*/
 /*        MIS REGLAS       */
 /*-------------------------*/
 
-#clearButton {
+
+/*--------------------------------*/
+.test{} /* No eliminar esta línea */
+/*--------------------------------*/
+
+.weaButton {
   background-color: #838474;
   border: 2px solid white;
   border-radius: 27px;
@@ -340,7 +425,7 @@ label {
   transition: all 200ms;
 }
 
-#saveButton {
+.saveButton {
   background-color: #333333;
   border: 2px solid white;
   border-radius: 27px;
@@ -353,12 +438,12 @@ label {
   transition: all 200ms;
 }
 
-#saveButton:hover, #saveButton:focus {
+.saveButton:hover, .saveButton:focus {
   background-color: darkseagreen;
   color: white;
   outline: 0;
 }
-#clearButton:hover, #clearButton:focus {
+.weaButton:hover, .weaButton:focus {
   background-color: deepskyblue;
   color: white;
   outline: 0;

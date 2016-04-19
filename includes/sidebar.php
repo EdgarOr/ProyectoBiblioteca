@@ -23,13 +23,24 @@
                     <li><a href="#">Añadir ejemplares</a></li>
                     <li><a href="#">Eliminar</a></li>
                     
-                  </ul>
-                </li><li class="dropdown">
+                  </ul>                  
+                </li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-share"></i> Préstamo <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Administrar Préstamos</li>
+                        <li><a href="#">Nuevo</a></li>
+                        <li><a href="#">Buscar</a></li>
+                        <li><a href="#">Retorno</a></li>                    
+                    </ul>        
+                </li>
+                
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Usuarios <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Administrar Usuarios</li>
                     <li><a href="formularioAltaUsuario.php">Registrar</a></li>
-                    <li><a href="#">Buscar</a></li>
+                    <li><a href="buscarUsuario.php">Buscar</a></li>
                     <li><a href="#">Eliminar</a></li>
                     
                   </ul>
@@ -41,12 +52,7 @@
                     <a href="login.php" ><i class="fa fa-fw fa-check"></i> Iniciar sesión</a>
                 </li>
                 <li>
-                    <span >
-                        <a   href="catalogoLibros.php">
-                            <i class="fa fa-fw fa-search" ></i>  
-                        </a>
-                         <input type="text" class="form-control" placeholder="Libro, autor o categoría"/>
-                    </span>                       
+                    <a href="catalogoLibros.php"><i class="fa fa-fw fa-search" ></i> Buscar</a>
                 </li>                
             </ul>
             

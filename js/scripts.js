@@ -1,4 +1,6 @@
-// Awesome Bootstrap 3 sidebar Navigation
+/*------------------------------------------*/
+/*  Awesome Bootstrap 3 sidebar Navigation  */
+/*------------------------------------------*/
 
 $(document).ready(
     function () {
@@ -29,3 +31,28 @@ $(document).ready(
         $('#wrapper').toggleClass('toggled');
   });  
 });
+
+/*------------------------------------------------*/
+/*  FINAL Awesome Bootstrap 3 sidebar Navigation  */
+/*------------------------------------------------*/
+
+/////////////////////////////////////////////////////////////
+
+/*------------------------------*/
+/*  CSS Search Field Animation  */
+/*------------------------------*/
+
+$("#inpt_search").on('focus', function () {
+	$(this).parent('label').addClass('active');
+});
+
+$("#inpt_search").on('blur', function () {
+	if($(this).val().length == 0)
+		$(this).parent('label').removeClass('active');
+});
+
+/*------------------------------------*/
+/*  FINAL CSS Search Field Animation  */
+/*------------------------------------*/
+
+/////////////////////////////////////////////////////////////

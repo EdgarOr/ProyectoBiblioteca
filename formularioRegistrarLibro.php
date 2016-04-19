@@ -63,9 +63,9 @@
                             <select name="categoria" id="categoria" class="selectpicker" multiple title="Elija una categoría" data-width="250px">
                                 <option>Categoria 1</option>
                                 <option>Categoria 2</option>
-                                <option>Categoria 2</option>
-                                <option>Categoria 2</option>
-                                <option>Categoria 2</option>
+                                <option>Categoria 3</option>
+                                <option>Categoria 4</option>
+                                <option>Categoria 5</option>
                             </select>
                             
                             <button class="btn btn-link pull-right" type="button" data-toggle="modal" data-target="#modalCategoria"> Añadir otro</button>
@@ -81,11 +81,12 @@
                         <textarea name="descripcion" id="descripcion" cols="49" rows="6" placeholder="Breve descripción del libro..."></textarea>
                         
                         <div class="col-sm-4"></div>
-                        
-                        <button id="clearButton">Limpiar</button>
-                        <button id="saveButton">Guardar</button>
-                                
-                        
+                        <form action="" class="form-group">
+                            <button class="weaButton">Limpiar</button>
+                            <button class="saveButton">Guardar</button>
+                            
+                        </form>
+                                                        
                    </fieldset>
                    <hr>
                     
