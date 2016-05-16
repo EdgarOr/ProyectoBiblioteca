@@ -39,7 +39,7 @@
             <div class="col-lg-6 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="img/carminaRogel200x200.jpg" alt="Foto de Rosa Carmina">
                 <h3>Rosa Carmina Ponce
-                    <small>Database Manager</small>
+                    <small>DB Manager</small>
                 </h3>
                 <p>Breve descripción</p>
             </div>

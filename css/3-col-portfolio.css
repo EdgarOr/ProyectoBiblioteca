@@ -12,6 +12,21 @@ body {
     margin-bottom: 25px;
 }
 
+ul.pagination li a {
+    color:black;
+}
+
+ul.pagination li a.active{
+    background-color: #E67B2C;
+    color: white;
+}
+
+
+ul.pagination li a:hover:not(.active) {
+    background-color: white;
+    color: #E67B2C;
+}
+
 footer {
     margin: 50px 0;
-}
+}    

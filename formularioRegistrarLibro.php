@@ -82,7 +82,7 @@
                         
                         <div class="col-sm-4"></div>
                         <form action="" class="form-group">
-                            <button class="weaButton">Limpiar</button>
+                            <button class="cleanButton">Limpiar</button>
                             <button class="saveButton">Guardar</button>
                             
                         </form>

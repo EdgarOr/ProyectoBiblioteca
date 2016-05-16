@@ -12,7 +12,7 @@
                 </li>
                 
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-home"></i> Inicio</a>
+                    <a href="index.php"><i class="fa fa-fw fa-home"></i> Inicio</a>
                 </li>
                 
                 <li class="dropdown">
@@ -48,7 +48,7 @@
                 <li>
                     <a href="contactanos.php"><i class="fa fa-fw fa-bank"></i> Contacto</a>
                 </li>
-                <li>
+                <li id="sesion" name="sesion">
                     <a href="login.php" ><i class="fa fa-fw fa-check"></i> Iniciar sesión</a>
                 </li>
                 <li>
@@ -71,3 +71,5 @@
 
     </div>
     <!-- /#wrapper -->
+    
+    

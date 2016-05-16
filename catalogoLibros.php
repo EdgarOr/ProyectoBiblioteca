@@ -63,8 +63,8 @@
                     <li>
                         <a href="#">&laquo;</a>
                     </li>
-                    <li class="active">
-                        <a href="#">1</a>
+                    <li >
+                        <a class="active" href="#">1</a>
                     </li>
                     <li>
                         <a href="#">2</a>

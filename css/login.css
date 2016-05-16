@@ -14,7 +14,7 @@
   text-align: center;
 }
 #loginLabel .label-text {
-  color: #BEB58A;
+  color: #E67B2C;
   cursor: text;
   font-size: 20px;
   line-height: 20px;
@@ -28,8 +28,8 @@
 #loginLabel input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid #BEB58A;
-  color: white;
+  border-bottom: 2px solid #E67B2C;
+  color: #E67B2C;
   font-size: 36px;
   letter-spacing: -1px;
   outline: 0;
@@ -43,7 +43,7 @@
   width: 400px;
 }
 #loginLabel input:focus + .label-text {
-  color: #F0F0F0;
+  color: #E67B2C;
   font-size: 13px;
   -moz-transform: translateY(-105px);
   -ms-transform: translateY(-105px);
@@ -52,6 +52,7 @@
 }
 #loginLabel input:valid + .label-text {
   font-size: 13px;
+    color: #E67B2C
   -moz-transform: translateY(-105px);
   -ms-transform: translateY(-105px);
   -webkit-transform: translateY(-105px);
@@ -71,7 +72,7 @@
   transition: all 200ms;
 }
 #loginButton:hover, #loginButton:focus {
-  background-color: white;
+  background-color: #E67B2C;
   color: #333333;
   outline: 0;
 }

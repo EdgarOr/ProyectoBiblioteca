@@ -14,7 +14,7 @@
     <link href="css/round-about.css" rel="stylesheet">
     <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
-    <link href="css/style1.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
