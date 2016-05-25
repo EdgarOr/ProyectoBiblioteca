@@ -1,4 +1,3 @@
-
 /*-------------------------------------------*/
 /*   Awesome Bootstrap 3 sidebar Navigation  */
 /*-------------------------------------------*/
@@ -6,9 +5,13 @@
 @import "flat-ui.min.css";
 @import "font-awesome.min.css";
 @import "animate.min.css";
+
+
 /*-------------------------------*/
 /*           VARIABLES           */
 /*-------------------------------*/
+
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -383,8 +386,7 @@ label {
 
 /////////////////////////////////////////////////////////////
 
-
-/*-------------------------*/
+ /*-------------------------*/
 /*        MIS REGLAS       */
 /*-------------------------*/
 
@@ -434,3 +436,26 @@ label {
     color: red;
 }
 
+.parcheMargen {
+    margin-left: 80px;
+    margin-right: 80px;   
+    margin-bottom: 40px;
+}
+
+#imagenInicio1 {
+	width: auto;
+	height: auto;
+	background-image: url("../img/NaBU.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	
+}
+
+textarea{
+    font-size: 15px;
+}
+
+
+/////////////////////////////////////////////////////////////

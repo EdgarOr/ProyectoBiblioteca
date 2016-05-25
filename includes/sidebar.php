@@ -20,7 +20,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Administrar Libros</li>
                     <li><a href="formularioRegistrarLibro.php">Registrar</a></li>
-                    <li><a href="#">Añadir ejemplares</a></li>
+                    <li><a href="anadirEjemplar.php">Añadir ejemplares</a></li>
                     <li><a href="#">Eliminar</a></li>
                     
                   </ul>                  
@@ -71,5 +71,7 @@
 
     </div>
     <!-- /#wrapper -->
+    
+    
     
     

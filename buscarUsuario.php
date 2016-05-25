@@ -1,10 +1,14 @@
 <?php
     include 'includes/header.php';
     include 'includes/sidebar.php';
+
 ?>
 
     <div class="container">
-        <?php
+        <div class="row">
+            
+        </div>
+        <?php 
             include 'includes/buscar.php';
         ?>
         <div class="col-lg-4"></div>
