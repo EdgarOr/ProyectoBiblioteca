@@ -29,8 +29,8 @@
                     <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-share"></i> Préstamo <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Administrar Préstamos</li>
-                        <li><a href="#">Nuevo</a></li>
-                        <li><a href="#">Buscar</a></li>
+                        <li><a href="formularioAltaPrestamo.php">Nuevo</a></li>
+                        <li><a href="formularioPrestamoBuscar.php">Buscar</a></li>
                         <li><a href="#">Retorno</a></li>                    
                     </ul>        
                 </li>

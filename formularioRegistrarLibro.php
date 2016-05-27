@@ -4,7 +4,7 @@
 ?>
 
 
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper parcheMargen">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-md-5">
            
