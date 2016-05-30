@@ -44,6 +44,7 @@
                                         <th>Usuario</th>
                                         <th>Fecha</th>
                                         <th>Libros</th>
+                                        <th>Entregado</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -52,12 +53,14 @@
                                         <td>Usuario random</td>
                                         <td>22-05-2016</td>
                                         <td>Web, Android</td>
+                                        <td>NO</td>
                                     </tr>
                                     <tr data-toggle="modal" data-target="#modalPrestamo">
                                         <td>P2206161030</td>
                                         <td>Charlie</td>
                                         <td>22-06-2016</td>
                                         <td>Android, Web</td>
+                                        <td>SI</td>
                                     </tr>
                                 </tbody>
                                 
@@ -75,3 +78,8 @@
         </form>
     </div>
 </div>
+
+
+<?php
+    include 'includes/footer.php';
+?>
