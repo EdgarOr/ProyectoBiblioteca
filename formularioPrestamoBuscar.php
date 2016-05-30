@@ -37,9 +37,9 @@
                    
                     <div class="row">
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table table-hover" >
                                 <thead>
-                                    <tr>
+                                    <tr >
                                         <th>ID Prestamo</th>
                                         <th>Usuario</th>
                                         <th>Fecha</th>
@@ -47,13 +47,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr data-toggle="modal" data-target="#modalPrestamo">
                                         <td>P2205161030</td>
                                         <td>Usuario random</td>
                                         <td>22-05-2016</td>
                                         <td>Web, Android</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-toggle="modal" data-target="#modalPrestamo">
                                         <td>P2206161030</td>
                                         <td>Charlie</td>
                                         <td>22-06-2016</td>
@@ -63,6 +63,10 @@
                                 
                             </table>
                         </div>
+                        
+                        <?php
+                            include 'includes/modals/modalPrestamo.php';
+                        ?>
                     </div>
                    
                    
