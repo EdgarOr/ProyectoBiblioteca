@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -19,11 +19,26 @@ $opcion = $_POST['accion'];
 switch ($opcion) {
     //Ver categorías
     case 1:
-        $Estantes = new Tabla(TABLA_CATEGORIAS);
-        $Estantes->conectar();
-        $Estantes->select_database();
-        $query = 'select * from '.$Estantes->nombre_Table().';';
-        $result=$Estantes->query($query);
+        $nombre = $_POST['nombre'];
+        $Categoria = new Tabla(TABLA_CATEGORIAS);
+        $Categoria->conectar();
+        $Categoria->select_database();
+        $Categoria->set(NOMBRE_CATEGORIA, $nombre);
+        $result = $Categoria->insertar();
+        $Categoria->close();
+        if ($result == "1") {
+            echo '<script language="javascript">alert("La categoría se guardó correctamente.");</script>';
+        } else {
+            echo '<script language="javascript">alert("Hubo un error al guardar La categoría.");</script>';
+        }
+        break;
+
+    default:
+        $Categorias = new Tabla(TABLA_CATEGORIAS);
+        $Categorias->conectar();
+        $Categorias->select_database();
+        $query = 'select * from ' . $Categorias->nombre_Table() . ';';
+        $result = $Categorias->query($query);
         $json = array();
         while ($row1 = mysqli_fetch_array($result)) {
             $json[] = [ID_CATEGORIA => $row1[ID_CATEGORIA],
@@ -31,8 +46,5 @@ switch ($opcion) {
         }
         echo json_encode(array_values($json));
         $t_Idiomas->close();
-        break;
-
-    default:
         break;
 }

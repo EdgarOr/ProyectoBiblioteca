@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -19,11 +19,28 @@ $opcion = $_POST['accion'];
 switch ($opcion) {
     //Ver categorías
     case 1:
-        $Estantes = new Tabla(TABLA_ESTANTES);
-        $Estantes->conectar();
-        $Estantes->select_database();
-        $query = 'select * from '.$Estantes->nombre_Table().';';
-        $result=$Estantes->query($query);
+        $id=$_POST['clave'];
+        $nombre=$_POST['clave'];
+        $Categoria = new Tabla(TABLA_ESTANTES);   
+        $Categoria->conectar();
+        $Categoria->select_database();
+        $Categoria->set(ID_ESTANTE, $id);
+        $Categoria->set(NOMBRE_ESTANTE, $nombre);
+        $result=$Categoria->insertar();
+        $Categoria->close();
+        if($result=="1") {
+            echo '<script language="javascript">alert("El estante se guardó correctamente.");</script>';
+        } else {
+            echo '<script language="javascript">alert("Hubo un error al guardar el estante.");</script>';
+        }
+        break;
+
+    default:
+        $Categorias = new Tabla(TABLA_ESTANTES);
+        $Categorias->conectar();
+        $Categorias->select_database();
+        $query = 'select * from ' . $Categorias->nombre_Table() . ';';
+        $result = $Categorias->query($query);
         $json = array();
         while ($row1 = mysqli_fetch_array($result)) {
             $json[] = [ID_ESTANTE => $row1[ID_ESTANTE],
@@ -31,8 +48,5 @@ switch ($opcion) {
         }
         echo json_encode(array_values($json));
         $t_Idiomas->close();
-        break;
-
-    default:
         break;
 }
