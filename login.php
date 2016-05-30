@@ -7,13 +7,14 @@
    <div class="col-md-3"></div>
 
     <div class="col-md-6">
-         <form id="loginForm">
+        <form action="WebServicesUsuario.php" id="loginForm" method="post">
+            <input type="hidden" name="accion" value=1>
              <label id="loginLabel">
-                 <input type="text" required />
+                 <input name="user" type="text" required />
                  <div class="label-text">Usuario</div>
             </label>
             <label id="loginLabel">
-                <input type="password" required />
+                <input name="pass" type="password" required />
                 <div class="label-text">Contraseña</div>
             </label>
             <button id="loginButton">Aceptar</button>

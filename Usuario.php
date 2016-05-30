@@ -27,7 +27,6 @@ class Usuario extends Tabla {
         $login = "select count(*) as login " .
                 "from usuario " .
                 "where claveUsuario='" . $user . "' and contrasenaUsuario='" . $password . "';";
-        echo $login;
         return $this->query($login);
     }
     
