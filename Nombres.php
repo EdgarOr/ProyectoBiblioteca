@@ -11,14 +11,14 @@ define('PASSWORD', "java43");
 define('USE_DATABASE', "nabudb");
 
 // Tabla de la categoría 
-define('TABLA_CATEGORIAS', "Categoria");
+define('TABLA_CATEGORIAS', "categoria");
 define('ID_CATEGORIA', "idCategoria");
 define('NOMBRE_CATEGORIA', "nombreCategoria");
 
 // Tabla de estantes 
-define('TABLA_ESTANTES', "Estante");
-define('ID_ESTANTE', "idIdiomas");
-define('NOMBRE_IDIOMA', "nombre");
+define('TABLA_ESTANTES', "estante");
+define('ID_ESTANTE', "idEstante");
+define('NOMBRE_ESTANTE', "nombre");
 
 // Tabla de libros
 define('TABLA_LIBROS', "libro");
