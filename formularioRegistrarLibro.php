@@ -8,9 +8,10 @@
         <div class="col-md-2"></div>
         <div class="col-md-8 col-md-5">
            
-            <form action="">
+            <form action="WebServicesLibro.php" method="post">
                 <div class="form-group">
                    <fieldset>
+                       <input type="hidden" name="accion" value=1>
                        <legend> <h2> Alta libro </h2> </legend>
                        <?php
                         include 'includes/campos/libros/campoLibroISBN.php';
@@ -77,7 +78,7 @@
                         <div class="col-sm-4"></div>
                         <form action="" class="form-group">
                             <button class="cleanButton">Limpiar</button>
-                            <button class="saveButton">Guardar</button>
+                            <button class="saveButton" id="salida">Guardar</button>
                             
                         </form>
                                                         
