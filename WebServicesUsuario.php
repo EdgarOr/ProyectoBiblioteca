@@ -28,11 +28,14 @@ switch ($opcion) {
         $Usuario->select_database();
         $resultado = mysqli_fetch_array($Usuario->login($user, $pass));
         if ($resultado['login'] == "1") {
-            header("Location: http://localhost/ProyectoBiblioteca/index.php");
+            header("Location: http://localhost/ProyectoBiblioteca/home.php");
             echo '<script language="javascript">alert("Sesión iniciada.");</script>';
+            
+            
         } else {
+            header("Location: http://localhost/ProyectoBiblioteca/index.php");
             echo '<script language="javascript">alert("Error al iniciar sesión.");</script>';
-            header("http://localhost/ProyectoBiblioteca/login.php");
+            
         }
         $Usuario->close();
         break;

@@ -12,7 +12,7 @@
                 </li>
                 
                 <li>
-                    <a href="index.php"><i class="fa fa-fw fa-home"></i> Inicio</a>
+                    <a href="home.php"><i class="fa fa-fw fa-home"></i> Inicio</a>
                 </li>
                 
                 <li class="dropdown">
@@ -20,9 +20,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Administrar Libros</li>
                     <li><a href="formularioRegistrarLibro.php">Registrar</a></li>
-                    <li><a href="anadirEjemplar.php">Añadir ejemplares</a></li>
-                    <li><a href="#">Eliminar</a></li>
-                    
+                    <li><a href="anadirEjemplar.php">Editar</a></li>
                   </ul>                  
                 </li>
                 <li class="dropdown">
@@ -40,7 +38,7 @@
                     <li class="dropdown-header">Administrar Usuarios</li>
                     <li><a href="formularioAltaUsuario.php">Registrar</a></li>
                     <li><a href="buscarUsuario.php">Buscar</a></li>
-                    <li><a href="#">Eliminar</a></li>
+                    
                     
                   </ul>
                 </li>
@@ -48,7 +46,7 @@
                     <a href="contactanos.php"><i class="fa fa-fw fa-bank"></i> Contacto</a>
                 </li>
                 <li id="sesion" name="sesion">
-                    <a href="login.php" ><i class="fa fa-fw fa-check"></i> Iniciar sesión</a>
+                    <a href="index.php" ><i class="fa fa-fw fa-check"></i> Cerrar sesión</a>
                 </li>
                 <li>
                     <a href="catalogoLibros.php"><i class="fa fa-fw fa-search" ></i> Buscar</a>

@@ -9,9 +9,9 @@
         <div class="col-md-8 col-md-5">
            
             <form action="">
-                <div class="form-group">
+                
                    <fieldset>
-                       <legend> <h2> Añadir Ejemplar </h2> </legend>
+                       <legend> <h2> Editar </h2> </legend>
                        <div class="row">
                            <div class="col-md-4 form-group">
                                <?php
@@ -39,28 +39,53 @@
                        </div>
                        
                        <div class="row">
-                           <div class="col-md-8">
-                              <?php
-                                    include 'includes/campos/libros/campoAnhadirInfo.php';
-                               ?>
-                           </div>
-                           <div class="col-md-2">
-                               
-                            <button class="btn btn-link pull-right" type="button" data-toggle="modal" data-target="#modalAnadirEjemplar"> Añadir</button>
-                            <button class="btn btn-link pull-right" type="button" data-toggle="modal" data-target="#modalEditarEjemplar"> Editar</button>
+                           
+                           <div class="table-responsive">
+                                <table class="table table-hover" id="infoLibro" name="infoLibro">
+                                    <thead>
+                                        <tr >
+                                            <th>ISBN</th>
+                                            <th>Título</th>
+                                            <th>Autor(es)</th>
+                                            <th>Editorial</th>
+                                            <th>Categoría</th>
+                                            <th>Descripción</th>
+                                            <th>Año</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                           
+                       </div>
+                           
+                       
+                       <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-info center-block" type="button" data-toggle="modal" data-target="#modalAnadirEjemplar"> Añadir Ejemplar</button>
+                                
+                            </div>   
+                            <div class="col-md-4">
+                                <button class="btn btn-warning center-block" type="button" data-toggle="modal" data-target="#modalEditarEjemplar"> Editar</button>
+                                
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <button class="btn btn-danger center-block" type="button" data-toggle="modal" data-target="#modalEditarEjemplar"> Eliminar</button>
+                                
+                            </div>
+                     </div>
                             
                             <?php
                                 include 'includes/modals/modalAnadirEjemplar.php';
                                 include 'includes/modals/modalEditarEjemplar.php';
                             ?>
-                            
-                            
-                           </div>
-                           
-                       </div>
                     </fieldset>
                     
-                </div>
+               
                 
                 
             </form>
