@@ -57,14 +57,3 @@ $("#inpt_search").on('blur', function () {
 
 /////////////////////////////////////////////////////////////
 
-$(function(){
-
-    $('#pagination li a').click(function(){
-
-        $('#pagination li a.active').removeClass('active'); // remove the class from the currently selected
-        $(this).addClass('active'); // add the class to the newly clicked link
-
-    });
-
-});
-

@@ -47,6 +47,15 @@
                                 include 'includes/campos/usuarios/campoUsuarioEmail.php';
                              ?>                               
                          </div>
+                         <div class="col-md-6 form-group">
+                             <?php
+                                include 'includes/campos/usuarios/campoUsuarioDireccion.php';
+                             ?>
+                         </div>
+                         
+                     </div>
+                     
+                     <div class="row">
                          <div class="col-md-4 form-group">
                              <?php
                                 include 'includes/campos/usuarios/campoUsuarioTelefono1.php';

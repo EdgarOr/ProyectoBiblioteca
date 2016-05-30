@@ -10,11 +10,12 @@
     $expRfc         = "/^[A-Z,Ñ,&]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Z|\d]{3}$/";
     $expTelefono    = "/^[0-9]{10,15}$/";
     $expEmail       = "/^[^0-9][A-Za-z0-9_]+([.][A-Za-z0-9_]+)*[@][A-Za-z0-9_]+([.][A-Za-z0-9_]+)*[.][a-zA-Z]{2,4}$/";
+    
    
     $errorClaveUsuario = $errorNombreUsuario = $errorApellidoPaterno = $errorApellidoMaterno = $errorEmailUsuario = $errorTelefono1Usuario = $errorTelefono2Usuario ="";
     
     
-    $claveUsuario = $apellidoPaterno = $apellidoMaterno = $nombreUsuario = $emailUsuario = $telefono1Usuario = $telefono2Usuario = "";
+    $claveUsuario = $apellidoPaterno = $apellidoMaterno = $nombreUsuario = $emailUsuario = $telefono1Usuario = $telefono2Usuario = $direccion = "";
 
     if(isset($_GET['guardar'])){
         if (empty($_GET["claveUsuario"])) {
@@ -65,6 +66,10 @@
             }
 
         } // Cerramos if de emailUsuario
+        
+        if(!empty($_GET["direccion"])){
+            $direccion = test_input($_GET["direccion"]);
+        }// Cerramos if de direccion
         
         if (empty($_GET["telefono1Usuario"])) {
             $errorTelefono1Usuario = "El teléfono 1 del usuario es OBLIGATORIO, verifique";
