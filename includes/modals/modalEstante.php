@@ -6,7 +6,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <label for="email">Estante:</label>
-                <form action="WebServicesEstantes.php" method="post" id="formEst">
+                <form action="WebServicesEstante.php" method="post" id="formEst">
                     <input name="clave" class="form-control" id="text" placeholder="Introduzca la clave del estante" type="text">
                 </form>
             </div>

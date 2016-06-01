@@ -65,13 +65,13 @@ switch ($opcion) {
         $minutos = $fecha['minutes'];
         $idPrestamo = $hora . $minutos . $dia . $mes . $anio;
 
-        $fechaPrestado =$anio . '-' . $mes . '-' . $dia;
+        $fechaPrestado = $anio . '-' . $mes . '-' . $dia;
 
         $dia2 = date('d', time() + 338400);
         $mes2 = date('F', time() + 338400);
         $anio2 = date('Y', time() + 338400);
         $fechaRetorno = $anio2 . '-' . $mes2 . '-' . $dia2;
-
+        
         $entregado = 1;
 
         $copiaLibro = $_POST['isbn'];
@@ -79,25 +79,41 @@ switch ($opcion) {
         $usuario = $_POST['claveUsuario'];
 
         $encargado = $_POST['claveEncargado'];
-        
-        $Prestamo = new Tabla(TABLA_PRESTAMO);
-        $Prestamo ->conectar();
-        $Prestamo->select_database();
-        $Prestamo->set(ID_PRESTAMO, $idPrestamo);
-        $Prestamo->set(FECHA_PRESTAMO_INICIO, $fechaPrestado);
-        $Prestamo->set(FECHA_PRESTAMO_RETORNO, $fechaRetorno);
-        $Prestamo->set(PRESTAMO_ENTREGADO, $entregado);
-        $Prestamo->set(PRESTAMO_COPIA_LIBRO, $copiaLibro);
-        $Prestamo->set(PRESTAMO_USUARIO_ID, $usuario);
-        $Prestamo->set(PRESTAMO_ENCARGADO, $encargado);
-        $resultado=$Prestamo->insertar();
-        $Prestamo->close();
-        if ($result == 1) {
-            echo '<script language="javascript">alert("El prestamo se guardó correctamente.");</script>';
-            header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+//        echo 'Antes';
+//        $Lib = new Libro();
+//        echo 'Des';
+//        $Lib->conectar();
+//        $Lib->select_database();
+        $T = new Tabla(TABLA_COPIA_LIBRO);
+        $T->conectar();
+        $T->select_database();
+        $libroDisponible = "select count(*) as disp from copia_libro where idCopia_Libro='" . $copiaLibro . "' and disponible='disponible';";
+        $res = mysqli_fetch_array($T->query($libroDisponible));
+//        echo $res;
+//        echo ' '.$res['disp'];
+        $T->close();
+        if ($res['disp'] == 0) {
+            echo '<script language="javascript">alert("No hay copias disponibles del libro.");</script>';
         } else {
-            echo '<script language="javascript">alert("Hubo un error al guardar el prestamo.");</script>';
-            header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+            $Prestamo = new Tabla(TABLA_PRESTAMO);
+            $Prestamo->conectar();
+            $Prestamo->select_database();
+            $Prestamo->set(ID_PRESTAMO, $idPrestamo);
+            $Prestamo->set(FECHA_PRESTAMO_INICIO, $fechaPrestado);
+            $Prestamo->set(FECHA_PRESTAMO_RETORNO, $fechaRetorno);
+            $Prestamo->set(PRESTAMO_ENTREGADO, $entregado);
+            $Prestamo->set(PRESTAMO_COPIA_LIBRO, $copiaLibro);
+            $Prestamo->set(PRESTAMO_USUARIO_ID, $usuario);
+            $Prestamo->set(PRESTAMO_ENCARGADO, $encargado);
+            $resultado = $Prestamo->insertar();
+            $Prestamo->close();
+            if ($resultado == 1) {
+                echo '<script language="javascript">alert("El prestamo se guardó correctamente.");</script>';
+                header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+            } else {
+                echo '<script language="javascript">alert("Hubo un error al guardar el prestamo.");</script>';
+                header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+            }
         }
         break;
 }

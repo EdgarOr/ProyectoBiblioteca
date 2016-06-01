@@ -40,7 +40,7 @@ class Libro extends Tabla {
     }
     
     public function libroDisponible ($isbn) {
-        $libroDisponible = "select count(*) as disponible from ";
+        $libroDisponible = "select count(*) as disp from copia_libro where Libro_isbn='".$isbn."' and disponible='disponible';";
         return $this->query(utf8_decode($libroDisponible));
     }
     
