@@ -14,10 +14,10 @@
                 </h1>
                 
                 <h4>Visión:</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, nisi libero totam aperiam, saepe reprehenderit magni repellendus omnis veniam! Eum asperiores explicabo, maxime dolorem at labore vitae rerum repudiandae reprehenderit.</p>
+                <p>Nuestra visión es convertirnos en la plataforma más utilizada y confiable para la gestión de un sistema bibliotecario, ofreciendo a los usuarios seguridad, tranquilidad y comodidad al saber que siempre podrán contar con sus libros preferidos en nuestras librerías.</p>
                 
                 <h4>Misión:</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, nisi libero totam aperiam, saepe reprehenderit magni repellendus omnis veniam! Eum asperiores explicabo, maxime dolorem at labore vitae rerum repudiandae reprehenderit.</p>
+                <p>Ser una empresa comprometida con sus clientes, ofrecerles nuestros servicios de manera confiable y eficaz para que pueda establecer una conexión más ágil con el cliente, lo que le permita adquirir los productos de manera más rápida y cómoda posible.</p>
                 
             </div>
         </div>
@@ -34,28 +34,28 @@
                 <h3>Adrián Ochoa
                     <small>Web Developer</small>
                 </h3>
-                <p>Breve descripción</p>
+                <p></p>
             </div>
             <div class="col-lg-6 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="img/carminaRogel200x200.jpg" alt="Foto de Rosa Carmina">
                 <h3>Rosa Carmina Ponce
                     <small>DB Manager</small>
                 </h3>
-                <p>Breve descripción</p>
+                <p></p>
             </div>
             <div class="col-lg-6 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="img/olgaTejeda200x200.jpg" alt="Foto de Olga Tejeda">
                 <h3>Olga Tejeda
                     <small>Data Analist</small>
                 </h3>
-                <p>Breve descripción</p>
+                <p></p>
             </div>
             <div class="col-lg-6 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="img/edgar200x200.jpg" alt="Foto de Edgar Ordoñez">
                 <h3>Edgar Ordoñez
                     <small>Web Developer</small>
                 </h3>
-                <p>Breve descripción</p>
+                <p></p>
             </div>
             <div class="col-lg-3"></div>
             
@@ -64,7 +64,7 @@
                 <h3>Manuel Arano
                     <small>Nabu's Manager</small>
                 </h3>
-                <p>Breve descripción</p>
+                <p></p>
             </div>
            
         </div>

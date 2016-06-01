@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -31,31 +31,73 @@ switch ($opcion) {
         $categoria = 'N';
         $descripcion = $_POST[DESCRIPCION];
         $anio = $_POST[ANIO];
-        $query = $isbn.' '.$nombreLibro.' '.$autorLibro.' '.$editorial.' '.$estante.' '.$categoria.' '.$descripcion.' '.$anio;
+
 //        echo $query;
         $Libro = new Tabla(TABLA_LIBROS);
 //        echo 'cree';
-        $Libro ->conectar();
-        $Libro ->select_database();
+        $Libro->conectar();
+        $Libro->select_database();
 //        echo 'conecte';
         $Libro->set(ID_Libro, $isbn);
-        $Libro->set(NOMBRE_LIBRO,$nombreLibro);
+        $Libro->set(NOMBRE_LIBRO, $nombreLibro);
         $Libro->set(EDITORIAL, $editorial);
         $Libro->set(ESTANTE, $estante);
         $Libro->set(CATEGORIA, $categoria);
         $Libro->set(DESCRIPCION, $descripcion);
         $Libro->set(ANIO, $anio);
-        $result=$Libro->insertar();
+        $result = $Libro->insertar();
         $Libro->close();
-        if($result=="1") {
+        if ($result == 1) {
             echo '<script language="javascript">alert("El libro se guardó correctamente.");</script>';
-            header("http://localhost/ProyectoBiblioteca/formularioRegistrarLibro.php");
+            header("Location: http://localhost/ProyectoBiblioteca/formularioRegistrarLibro.php");
         } else {
             echo '<script language="javascript">alert("Hubo un error al guardar el libro.");</script>';
             header("http://localhost/ProyectoBiblioteca/formularioRegistrarLibro.php");
         }
         break;
+    //Prestamo de libro
+    case 2:
+        $fecha = getdate();
+        $dia = $fecha['mday'];
+        $mes = $fecha['mon'];
+        $anio = $fecha['year'];
+        $hora = $fecha['hours'];
+        $minutos = $fecha['minutes'];
+        $idPrestamo = $hora . $minutos . $dia . $mes . $anio;
 
-    default:
+        $fechaPrestado =$anio . '-' . $mes . '-' . $dia;
+
+        $dia2 = date('d', time() + 338400);
+        $mes2 = date('F', time() + 338400);
+        $anio2 = date('Y', time() + 338400);
+        $fechaRetorno = $anio2 . '-' . $mes2 . '-' . $dia2;
+
+        $entregado = 1;
+
+        $copiaLibro = $_POST['isbn'];
+
+        $usuario = $_POST['claveUsuario'];
+
+        $encargado = $_POST['claveEncargado'];
+        
+        $Prestamo = new Tabla(TABLA_PRESTAMO);
+        $Prestamo ->conectar();
+        $Prestamo->select_database();
+        $Prestamo->set(ID_PRESTAMO, $idPrestamo);
+        $Prestamo->set(FECHA_PRESTAMO_INICIO, $fechaPrestado);
+        $Prestamo->set(FECHA_PRESTAMO_RETORNO, $fechaRetorno);
+        $Prestamo->set(PRESTAMO_ENTREGADO, $entregado);
+        $Prestamo->set(PRESTAMO_COPIA_LIBRO, $copiaLibro);
+        $Prestamo->set(PRESTAMO_USUARIO_ID, $usuario);
+        $Prestamo->set(PRESTAMO_ENCARGADO, $encargado);
+        $resultado=$Prestamo->insertar();
+        $Prestamo->close();
+        if ($result == 1) {
+            echo '<script language="javascript">alert("El prestamo se guardó correctamente.");</script>';
+            header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+        } else {
+            echo '<script language="javascript">alert("Hubo un error al guardar el prestamo.");</script>';
+            header("Location: http://localhost/ProyectoBiblioteca/formularioAltaPrestamo.php");
+        }
         break;
 }

@@ -7,7 +7,7 @@
  */
 define('USER', "root");
 define('HOST', "localhost");
-define('PASSWORD', "");
+define('PASSWORD', "java43");
 define('USE_DATABASE', "nabudb");
 
 // Tabla de la categoría 

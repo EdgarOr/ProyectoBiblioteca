@@ -67,11 +67,9 @@ switch ($opcion) {
         $result=$Usuario->insertar();
         $Usuario->close();
         if($result=="1") {
-            header("Location: http://localhost/ProyectoBiblioteca/index.php");
-            echo '<script language="javascript">alert("El usuario se guardó correctamente.");</script>';
+            header("Location: http://localhost/ProyectoBiblioteca/home.php");
         } else {
             echo '<script language="javascript">alert("Hubo un error al guardar elusuario.");</script>';
-            header("Location: http://localhost/ProyectoBiblioteca/formularioAltaUsuario.php");
         }
         break;
 }

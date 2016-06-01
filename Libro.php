@@ -39,4 +39,9 @@ class Libro extends Tabla {
         return $this->query(utf8_decode($libro));
     }
     
+    public function libroDisponible ($isbn) {
+        $libroDisponible = "select count(*) as disponible from ";
+        return $this->query(utf8_decode($libroDisponible));
+    }
+    
 }
